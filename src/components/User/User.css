@@ -1,0 +1,125 @@
+/* src/components/User/User.css */
+.user-sidebar {
+  flex-basis: 280px; /* <--- ВИРІШУЄ ПРОБЛЕМУ №1 */
+  flex-shrink: 0;
+  background-color: var(--color-bg-component);
+  border-left: 1px solid var(--color-border);
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.user-sidebar h2 {
+  margin: 0 0 0.5rem 0;
+}
+
+.sidebar-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-text-secondary);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  padding-top: 0.75rem; /* <--- ВИРІШУЄ ПРОБЛЕМУ №3 */
+}
+
+/* Блок "Учасники кімнати" */
+.members-list-block {
+  background-color: var(--color-bg-container);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+}
+
+.members-list-block h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin: 0 0 0.75rem 0;
+}
+
+.members-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.members-list li {
+  font-size: 0.875rem;
+  color: var(--color-text-primary);
+  word-break: break-all;
+}
+.members-list li .username {
+  color: var(--color-text-secondary);
+  font-family: monospace;
+}
+
+/* Блок "Запрошення та Приєднання" */
+.invite-join-area {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.invite-join-area > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* <--- ВИРІШУЄ ПРОБЛЕМУ №4 */
+}
+
+.invite-join-area input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.invite-join-area .invite-button {
+  background-color: var(--color-primary);
+}
+.invite-join-area .invite-button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.invite-join-area .join-button {
+  background-color: var(--color-primary);
+}
+.invite-join-area .join-button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.members-list li {
+  /* Додаємо flex, щоб розмістити кнопку */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.members-list li .member-info {
+  /* Обмежуємо ширину тексту */
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px; /* Відступ від кнопки */
+}
+
+.kick-user-btn {
+  background: none;
+  border: none;
+  color: #f87171; /* Червоний */
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  flex-shrink: 0; /* Не стискати кнопку */
+}
+.kick-user-btn:hover {
+  background-color: var(--color-bg-main);
+  color: #ef4444; /* Темно-червоний */
+}

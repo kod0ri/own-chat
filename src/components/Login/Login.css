@@ -1,0 +1,39 @@
+/* src/components/Login/Login.css */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  
+  /* --- ДОДАНО --- */
+  /* Повертаємо вигляд "картки" */
+  width: 24rem;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-main);
+  background-color: var(--color-bg-container);
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.login-container input {
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+.login-container button {
+  background-color: var(--color-primary);
+  width: 100%;
+}
+.login-container button:hover {
+  background-color: var(--color-primary-hover);
+  border-color: transparent;
+}
+
+.login-container .error-message {
+  color: #ff6b6b;
+  text-align: center;
+  margin-top: 0.5rem;
+}

@@ -1,0 +1,87 @@
+/* src/index.css */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* --- Змінні Темної Теми --- */
+  --color-bg-main: #1a1a1a;
+  --color-bg-container: #242424;
+  --color-bg-component: #2f2f2f;
+  --color-bg-input: #3a3a3a;
+  --color-border: #444;
+  --color-text-primary: rgba(255, 255, 255, 0.87);
+  --color-text-secondary: rgba(255, 255, 255, 0.6);
+  --color-primary: #646cff;
+  --color-primary-hover: #535bf2;
+  --color-active-room: var(--color-primary);
+  --color-hover-room: #3a3a3a;
+  --shadow-main: 0 4px 20px rgba(0, 0, 0, 0.25);
+
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- НОВИЙ БЛОК ДЛЯ ПОВНОГО ЕКРАНУ --- */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* Видалено:
+    display: flex;
+    place-items: center;
+  */
+  min-width: 320px;
+  background-color: var(--color-bg-main);
+  color: var(--color-text-primary);
+}
+
+/* --- (решта стилів button, input, h2 і т.д. без змін) --- */
+h1, h2 {
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+  font-weight: 500;
+  border: 0;
+  padding: 0;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--color-bg-input);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: all 0.25s;
+}
+button:hover {
+  border-color: var(--color-primary);
+}
+button:disabled {
+  background-color: #555;
+  color: #888;
+  cursor: not-allowed;
+  border-color: transparent;
+}
+
+input, textarea {
+  background-color: var(--color-bg-input);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+}
+input::placeholder, textarea::placeholder {
+  color: var(--color-text-secondary);
+}

@@ -1,0 +1,123 @@
+/* Основна обгортка */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #f0f2f5;
+  font-family: Arial, sans-serif;
+}
+
+/* Контейнер */
+.container {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+/* Заголовки */
+h1, h2 {
+  color: #333;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+  margin-bottom: 1rem;
+}
+
+/* Списки */
+ul {
+  list-style-type: disc;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Таблиця */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+}
+
+th {
+  background-color: #f8f8f8;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Адаптація під вузькі екрани */
+@media (max-width: 600px) {
+  #root {
+    padding: 1rem;
+  }
+  
+  .container {
+    padding: 1rem;
+  }
+
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  tr {
+    margin-bottom: 1rem;
+  }
+
+  td {
+    padding-left: 50%;
+    position: relative;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+    font-weight: bold;
+  }
+}
+
+:root {
+  color-scheme: light;
+  color: #333; /* темний текст */
+  background-color: #f0f2f5; /* світлий фон */
+}
+
+body {
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+/* --- Стилі для Sidebar (адаптовано з PDF)  --- */
+
+.sidebar {
+  min-width: 250px; /* [cite: 102] */
+}
+
+.chat-area {
+  flex-grow: 1; /* [cite: 104] */
+}
+
+.message-input {
+  min-height: 80px; /* [cite: 107] */
+}
+
+.room-list li {
+  padding: 8px; /* [cite: 110] */
+  transition: background-color 0.2s; /* [cite: 111] */
+  list-style-type: none; /* Додано для чистішого вигляду */
+}
+
+.room-list li:hover {
+  background-color: #e0e7ff; /* [cite: 115] */
+}
+
+.room-list li.active {
+  background-color: #bfdbfe; /* [cite: 118] */
+  font-weight: 500; /* [cite: 119] */
+}

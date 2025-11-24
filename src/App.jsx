@@ -250,7 +250,6 @@ function App() {
   // --- JSX (РОЗМІТКА) ---
   // Вона стала набагато чистішою!
   return (
-    // Ми видалили всі класи Tailwind звідси і замінили їх на класи з App.css
     <div 
       className={`app-container ${
         accessToken ? 'chat' : 'login' 
